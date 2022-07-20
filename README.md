@@ -1,4 +1,5 @@
-### Hi there 👋
+<img src='https://www.dropbox.com/s/38knnr8gzdk8nde/github%20banner.jpg?dl=0' width="200px"/>
+<h1>Michael Pfister - Full Stack Web Developer</h1>
 
 <!--
 **stracciatella27/stracciatella27** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
