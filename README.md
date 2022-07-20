@@ -1,17 +1,17 @@
-<img src='https://www.dropbox.com/s/38knnr8gzdk8nde/github%20banner.jpg?dl=0' width="200px"/>
-<h1>Michael Pfister - Full Stack Web Developer</h1>
+<img src='https://github.com/stracciatella27/stracciatella27/raw/main/banner.jpg' width="100%"/>
+<h1>Hi! Welcome to my GitHub Page!</h1>
+<h3>📋 About Me</h3>
+<p>
+My actual name is Michael! I've <strong>been doing random IT stuff since 2016</strong> and I'm probably never going to stop. I currently work as a Full Stack Web Developer.
+</p>
+<p>
+👯 I’m looking to collaborate on any open-source project I can get my hands on so if you got something going just let me know!
+</p>
 
-<!--
-**stracciatella27/stracciatella27** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+<h3>✍️ My 5 Core Values</h3>
 
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+- 🧑‍💻 Writing code that is both efficient and well-structured
+- 🧠 Maintaining a high level of curiosity for new technologies
+- 📖 Having a deep level of understanding in anything I do
+- 🔥 Always trying to be the best there is
+- 🤖 Automation and Optimization
