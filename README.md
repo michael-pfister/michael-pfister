@@ -8,7 +8,7 @@ My full name is Michael Pascal Pfister. I've <strong>been doing random IT stuff 
 🏗️ I’m open to collaborate on any open-source project I can get my hands on so if you got something going just let me know!
 </p>
 
-<h3>✍️ My 5 Core Values</h3>
+<h3>✍️ My 5 Core Principles</h3>
 
 - 🧑‍💻 Writing code that is both efficient and well-structured
 - 🧠 Maintaining a high level of curiosity for new technologies
