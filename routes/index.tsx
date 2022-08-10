@@ -1,9 +1,15 @@
 /** @jsx h */
-import { h } from "preact";
+/** @jsxFrag Fragment */
+import { Fragment, h } from "preact";
 import {Head} from "$fresh/runtime.ts";
 
 const sytles = {
-    root: {
+    hero: {
+      marginTop: "10%",
+      display: "flex",
+      alignItems: "center",
+      gap: "5rem",
+      flexWrap: "wrap",
     }
 }
 
@@ -11,13 +17,19 @@ const title = "🔥 Michael Pfister - Full Stack Web Developer";
 
 export default function Home() {
   return (
-    <div style={sytles.root}>
+    <>
       <Head>
         <title>{title}</title>
         <link rel="stylesheet" href="/normalize.css" />
         <link rel="stylesheet" href="/skeleton.css" />
       </Head>
-      <h1>hello</h1>
-    </div>
+      <section class="container" style={sytles.hero}>
+        <h1>
+          Hi,<br />
+          I'm Michael Pfister.
+        </h1>
+        <img src="snapshot.png" alt="a picture of me" width="400px"/>
+      </section>
+    </>
   );
 }
