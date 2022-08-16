@@ -4,6 +4,7 @@ import { tw } from "@twind";
 import Counter from "../islands/Counter.tsx";
 import { Head } from "https://deno.land/x/fresh@1.0.2/runtime.ts";
 import Terminal from "../islands/Terminal.tsx";
+import GitHubActivity from "https://esm.sh/github-activity-feed@0.3.0";
 
 function Hero() {
   return (
