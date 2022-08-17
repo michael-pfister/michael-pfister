@@ -20,7 +20,6 @@ export default function Terminal(props: TerminalProps) {
         clearInterval(interval);
         setLiveCommandActive(false);
       }
-      console.log("hi");
     }, 100);
   }, []);
   return (

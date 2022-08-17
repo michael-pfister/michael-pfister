@@ -1,2 +1,4 @@
 # unnecessary config file, used to get vscode extension to work
 twind.config.ts
+# dotenv
+.env
