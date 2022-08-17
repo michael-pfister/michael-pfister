@@ -10,7 +10,7 @@ export default function AppBar(
 
   return (
     <header
-      class={tw`p-1 lg:p-5 pr-5 lg:pr-10 flex justify-end text-2xl border-b-2 fixed w-screen top-0 bg-white`}
+      class={tw`p-1 lg:p-5 pr-5 lg:pr-10 flex justify-end text-2xl w-full top-0`}
     >
       <div class={tw`hidden lg:flex gap-16`}>
         {props.pages.map((page) => {
