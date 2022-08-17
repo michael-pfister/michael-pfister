@@ -8,6 +8,8 @@ import { Handlers, PageProps } from "$fresh/server.ts";
 import PullRequestActivityFeed from "../components/PullRequestActivityFeed.tsx";
 import AppBar from "../islands/AppBar.tsx";
 
+console.log(Deno.env.get('GitHubAccessToken'))
+
 export interface GitHubPullRequest {
   node: {
     pullRequest: {
