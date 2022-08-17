@@ -8,8 +8,6 @@ import { Handlers, PageProps } from "$fresh/server.ts";
 import PullRequestActivityFeed from "../components/PullRequestActivityFeed.tsx";
 import AppBar from "../islands/AppBar.tsx";
 
-console.log(Deno.env.get('GitHubAccessToken'))
-
 export interface GitHubPullRequest {
   node: {
     pullRequest: {
@@ -37,7 +35,7 @@ export const handler: Handlers<Array<GitHubPullRequest> | undefined> = {
 
       headers: {
         "Content-Type": "application/json",
-        "Authorization": `token ${config().GitHubAccessToken}`,
+        "Authorization": `token ${Deno.env.get('GitHubAccessToken') || config().GitHubAccessToken}`,
       },
 
       body: JSON.stringify({
