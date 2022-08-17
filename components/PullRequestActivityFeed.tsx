@@ -7,12 +7,12 @@ export default function PullRequestActivityFeed(
   props: { githubPullRequests: Array<GitHubPullRequest> },
 ) {
   return (
-    <div class={tw`m-5 mt-10`}>
+    <div class={tw`m-5`}>
       {props.githubPullRequests.map((githubPullRequest) => {
         return (
           <div
             key={githubPullRequest.node.pullRequest.id}
-            class={tw`mb-10 flex flex-wrap items-center gap-3`}
+            class={tw`mb-10 flex flex-wrap items-center gap-3 justify-center sm:justify-start`}
           >
             <a href="https://github.com/michael-pfister">
               <img
@@ -21,7 +21,7 @@ export default function PullRequestActivityFeed(
                 alt="my github profile"
               />
             </a>
-            <ul class={tw`list-none`}>
+            <ul class={tw`list-none text-center sm:text-left`}>
               <li>
                 <a
                   class={tw`underline text-2xl`}

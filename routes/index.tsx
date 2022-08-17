@@ -1,14 +1,12 @@
 /** @jsx h */
 import { Fragment, h } from "preact";
 import { tw } from "@twind";
-import Counter from "../islands/Counter.tsx";
 import { Head } from "https://deno.land/x/fresh@1.0.2/runtime.ts";
 import Terminal from "../islands/Terminal.tsx";
-import GitHubActivity from "https://esm.sh/github-activity-feed@0.3.0";
 import { config } from "https://deno.land/x/dotenv/mod.ts";
 import { Handlers, PageProps } from "$fresh/server.ts";
-import GithubActivityFeed from "https://esm.sh/v91/github-activity-feed@0.3.0/deno/github-activity-feed.js";
 import PullRequestActivityFeed from "../components/PullRequestActivityFeed.tsx";
+import AppBar from "../islands/AppBar.tsx";
 
 export interface GitHubPullRequest {
   node: {
@@ -44,7 +42,7 @@ export const handler: Handlers<Array<GitHubPullRequest> | undefined> = {
         query: `{
           user(login: "michael-pfister") {
             contributionsCollection {
-              pullRequestContributions(last: 3) {
+              pullRequestContributions(first: 3) {
                 edges{
                   node{
                     pullRequest{
@@ -77,6 +75,33 @@ export const handler: Handlers<Array<GitHubPullRequest> | undefined> = {
   },
 };
 
+const pages = [
+  {
+    title: "About Me",
+    href: "#about-me",
+  },
+  {
+    title: "Latest Activity",
+    href: "#latest-activity",
+  },
+  {
+    title: "Resume",
+    href: "/Michael_Pfister_-_Web_Developer.pdf",
+  },
+  {
+    title: "LinkedIn",
+    href: "https://www.linkedin.com/in/michael-pascal-pfister/",
+  },
+  {
+    title: "Twitter",
+    href: "https://twitter.com/ScaredToCompile",
+  },
+  {
+    title: "GitHub",
+    href: "https://github.com/michael-pfister",
+  },
+];
+
 function Hero() {
   return (
     <section
@@ -92,7 +117,10 @@ function Hero() {
 
 function AboutMe() {
   return (
-    <section class={tw`flex justify-evenly items-center flex-wrap gap-16 m-5`}>
+    <section
+      id="about-me"
+      class={tw`flex justify-evenly items-center flex-wrap gap-16 pt-[100px] pb-[100px] pr-10 pl-10 bg-black text-white`}
+    >
       <div class={tw`max-w-prose`}>
         <h1 class={tw`text-5xl`}>Nice to meet you! 🤝</h1>
         <br />
@@ -128,8 +156,11 @@ function LatestActivity(
   props: { githubPullRequests: Array<GitHubPullRequest> },
 ) {
   return (
-    <section class={tw`flex justify-center flex-wrap mt-[200px]`}>
-      <h1 class={tw`text-5xl w-full text-center`}>My Latest Activity</h1>
+    <section
+      id="latest-activity"
+      class={tw`flex justify-center flex-wrap mt-[100px]`}
+    >
+      <h1 class={tw`text-5xl w-full text-center m-3`}>My Latest Activity</h1>
       <PullRequestActivityFeed githubPullRequests={props.githubPullRequests} />
     </section>
   );
@@ -166,6 +197,7 @@ export default function Home(props: PageProps) {
         >
         </link>
       </Head>
+      <AppBar pages={pages} />
       <Hero />
       <AboutMe />
       <LatestActivity githubPullRequests={props.data} />
