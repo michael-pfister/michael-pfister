@@ -35,7 +35,9 @@ export const handler: Handlers<Array<GitHubPullRequest> | undefined> = {
 
       headers: {
         "Content-Type": "application/json",
-        "Authorization": `token ${Deno.env.get('GitHubAccessToken') || config().GitHubAccessToken}`,
+        "Authorization": `token ${
+          Deno.env.get("GitHubAccessToken") || config().GitHubAccessToken
+        }`,
       },
 
       body: JSON.stringify({
@@ -122,7 +124,7 @@ function AboutMe() {
       class={tw`flex justify-evenly items-center flex-wrap gap-16 pt-[100px] pb-[100px] pr-10 pl-10 bg-black text-white`}
     >
       <div class={tw`max-w-prose`}>
-        <h1 class={tw`text-5xl`}>Nice to meet you! 🤝</h1>
+        <h1 class={tw`text-3xl md:text-5xl`}>Nice to meet you! 🤝</h1>
         <br />
         <p>
           My full name is{" "}
@@ -144,7 +146,7 @@ function AboutMe() {
         </p>
       </div>
       <img
-        class={tw`w-[400px] rounded-full`}
+        class={tw`w-[200px] md:w-[400px] rounded-full`}
         src="/profile_picture.png"
         alt="me"
       />
@@ -160,7 +162,9 @@ function LatestActivity(
       id="latest-activity"
       class={tw`flex justify-center flex-wrap mt-[100px]`}
     >
-      <h1 class={tw`text-5xl w-full text-center m-3`}>My Latest Activity</h1>
+      <h1 class={tw`text-3xl md:text-5xl w-full text-center m-3`}>
+        My Latest Activity
+      </h1>
       <PullRequestActivityFeed githubPullRequests={props.githubPullRequests} />
     </section>
   );
