@@ -175,6 +175,7 @@ export default function Home(props: PageProps) {
     <Fragment>
       <Head>
         <title>Michael Pfister - Web Developer</title>
+        <meta name="description" content="Michael Pfister Web Developer"></meta>
         <link
           rel="stylesheet"
           href="https://unpkg.com/octicons@4.4.0/build/font/octicons.css"
