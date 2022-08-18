@@ -99,12 +99,22 @@ const pages = [
 function Hero() {
   return (
     <section
-      className={tw`flex justify-center items-center m-5 lg:h-screen`}
+      className={tw`flex justify-center items-center m-5 lg:h-screen flex-wrap`}
     >
       <Terminal
         terminalCommand={`echo "Hi I'm Michael, a Web Developer"`}
         terminalOutput={`Hi I'm Michael, a Web Developer`}
       />
+      <a
+        class={tw`hidden lg:flex w-screen justify-center animate-bounce`}
+        href="#about-me"
+      >
+        <img
+          class={tw`w-32`}
+          src="/arrow-down.svg"
+          alt="jump to about me section"
+        />
+      </a>
     </section>
   );
 }
@@ -112,6 +122,7 @@ function Hero() {
 function AboutMe() {
   return (
     <section
+      id="about-me"
       class={tw`flex justify-evenly items-center flex-wrap gap-8 pt-[50px] pb-[50px] pr-10 pl-10`}
     >
       <div class={tw`max-w-prose`}>
