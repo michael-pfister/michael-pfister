@@ -10,25 +10,14 @@ export default function AppBar(
 
   return (
     <header
-      class={tw`p-1 lg:p-5 pr-5 lg:pr-10 flex justify-end text-2xl w-full top-0`}
+      class={tw`p-1 lg:p-5 lg:pr-10 flex justify-end text-2xl w-full top-0`}
     >
       <div class={tw`hidden lg:flex gap-16`}>
         {props.pages.map((page) => {
           return <a href={page.href}>{page.title}</a>;
         })}
       </div>
-      <div class={tw`w-full flex justify-end gap-3 lg:hidden`}>
-        <ul class={tw`w-full text-center hidden ${hamburgerOpen && "inline"}`}>
-          {props.pages.map((page) => {
-            return (
-              <a href={page.href}>
-                <li class={tw`border-b-2`}>
-                  {page.title}
-                </li>
-              </a>
-            );
-          })}
-        </ul>
+      <div class={tw`w-full flex flex-wrap justify-end gap-3 lg:hidden`}>
         <button
           onClick={() => {
             setHamburgerOpen(!hamburgerOpen);
@@ -40,6 +29,19 @@ export default function AppBar(
             alt="hamburger menu"
           />
         </button>
+        <ul class={tw`w-full hidden ${hamburgerOpen && "inline"}`}>
+          {props.pages.map((page) => {
+            return (
+              <a href={page.href}>
+                <li
+                  class={tw`flex justify-center items-center border-b-1 h-16`}
+                >
+                  {page.title}
+                </li>
+              </a>
+            );
+          })}
+        </ul>
       </div>
     </header>
   );
