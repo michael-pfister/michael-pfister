@@ -30,7 +30,7 @@ export default function Terminal(props: TerminalProps) {
         <div class={tw`w-[20px] h-[20px] rounded-full bg-[red]`} />
       </div>
       <div
-        class={tw`bg-gray-900 bg-opacity-80 text-white p-5 rounded-b text-xl lg:text-2xl`}
+        class={tw`bg-gray-900 bg-opacity-80 text-white p-5 rounded-b md:text-xl lg:text-2xl`}
       >
         <span class={tw`text-green-500`}>admin@DESKTOP-6DUI86H&ensp;</span>
         <span class={tw`text-[magenta]`}>MINGW64&ensp;</span>
