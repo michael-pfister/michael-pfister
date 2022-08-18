@@ -14,7 +14,7 @@ export default function AppBar(
     >
       <div class={tw`hidden lg:flex gap-16`}>
         {props.pages.map((page) => {
-          return <a href={page.href}>{page.title}</a>;
+          return <a href={page.href} target="_blank">{page.title}</a>;
         })}
       </div>
       <div class={tw`w-full flex flex-wrap justify-end gap-3 lg:hidden`}>
@@ -32,7 +32,7 @@ export default function AppBar(
         <ul class={tw`w-full hidden ${hamburgerOpen && "inline"}`}>
           {props.pages.map((page) => {
             return (
-              <a href={page.href}>
+              <a href={page.href} target="_blank">
                 <li
                   class={tw`flex justify-center items-center border-b-1 h-16`}
                 >

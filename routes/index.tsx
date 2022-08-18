@@ -79,14 +79,6 @@ export const handler: Handlers<Array<GitHubPullRequest> | undefined> = {
 
 const pages = [
   {
-    title: "About Me",
-    href: "#about-me",
-  },
-  {
-    title: "Latest Contribution",
-    href: "#latest-contribution",
-  },
-  {
     title: "Resume",
     href: "/Michael_Pfister_-_Web_Developer.pdf",
   },
@@ -107,7 +99,7 @@ const pages = [
 function Hero() {
   return (
     <section
-      className={tw`flex justify-center items-center m-5 mt-[200px] mb-[200px]`}
+      className={tw`flex justify-center items-center m-5 lg:h-screen`}
     >
       <Terminal
         terminalCommand={`echo "Hi I'm Michael, a Web Developer"`}
@@ -120,11 +112,10 @@ function Hero() {
 function AboutMe() {
   return (
     <section
-      id="about-me"
-      class={tw`flex justify-evenly items-center flex-wrap gap-16 pt-[50px] pb-[50px] pr-10 pl-10`}
+      class={tw`flex justify-evenly items-center flex-wrap gap-8 pt-[50px] pb-[50px] pr-10 pl-10`}
     >
       <div class={tw`max-w-prose`}>
-        <h1 class={tw`text-3xl md:text-5xl`}>Nice to meet you! 🤝</h1>
+        <h1 class={tw`text-3xl lg:text-5xl`}>Nice to meet you! 🤝</h1>
         <br />
         <p>
           My full name is{" "}
@@ -146,7 +137,7 @@ function AboutMe() {
         </p>
       </div>
       <img
-        class={tw`w-[200px] md:w-[400px] rounded-full`}
+        class={tw`w-[200px] lg:w-[300px] rounded-full`}
         src="/profile_picture.png"
         alt="me"
       />
@@ -159,11 +150,10 @@ function LatestActivity(
 ) {
   return (
     <section
-      id="latest-contribution"
-      class={tw`flex justify-center flex-wrap mt-[100px]`}
+      class={tw`flex justify-center flex-wrap p-5`}
     >
-      <h1 class={tw`text-3xl md:text-5xl w-full text-center m-3`}>
-        My Latest Contribution
+      <h1 class={tw`text-3xl lg:text-5xl w-full text-center m-3`}>
+        My Latest Contributions
       </h1>
       <PullRequestActivityFeed githubPullRequests={props.githubPullRequests} />
     </section>
