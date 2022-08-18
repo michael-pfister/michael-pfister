@@ -3,7 +3,7 @@ import { Fragment, h } from "preact";
 import { tw } from "@twind";
 import { Head } from "https://deno.land/x/fresh@1.0.2/runtime.ts";
 import Terminal from "../islands/Terminal.tsx";
-import { config } from "https://deno.land/x/dotenv/mod.ts";
+import { config } from "https://deno.land/x/dotenv@v3.2.0/mod.ts";
 import { Handlers, PageProps } from "$fresh/server.ts";
 import PullRequestActivityFeed from "../components/PullRequestActivityFeed.tsx";
 import AppBar from "../islands/AppBar.tsx";
@@ -70,7 +70,7 @@ export const handler: Handlers<Array<GitHubPullRequest> | undefined> = {
         }`,
       }),
     });
-    const events: any = await resp.json();
+    const events = await resp.json();
     return ctx.render(
       events.data.user.contributionsCollection.pullRequestContributions.edges,
     );
@@ -135,6 +135,8 @@ function AboutMe() {
           <a
             class={tw`text-blue-600 underline`}
             href="https://www.google.com/maps/place/Vienna/"
+            target="_blank"
+            rel="noopener"
             alt="Google Maps Vienna"
           >
             Austria, Vienna.
