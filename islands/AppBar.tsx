@@ -32,7 +32,13 @@ export default function AppBar(
         <ul class={tw`w-full hidden ${hamburgerOpen && "inline"}`}>
           {props.pages.map((page) => {
             return (
-              <a href={page.href} target="_blank">
+              <a
+                href={page.href}
+                target="_blank"
+                onClick={() => {
+                  setHamburgerOpen(false);
+                }}
+              >
                 <li
                   class={tw`flex justify-center items-center border-b-1 h-16`}
                 >
