@@ -17,13 +17,15 @@ export default function AppBar(
           return <a href={page.href}>{page.title}</a>;
         })}
       </div>
-      <div class={tw`flex gap-3 lg:hidden`}>
-        <ul class={tw`hidden ${hamburgerOpen && "inline"}`}>
+      <div class={tw`w-full flex justify-end gap-3 lg:hidden`}>
+        <ul class={tw`w-full text-center hidden ${hamburgerOpen && "inline"}`}>
           {props.pages.map((page) => {
             return (
-              <li>
-                <a href={page.href}>{page.title}</a>
-              </li>
+              <a href={page.href}>
+                <li class={tw`border-b-2`}>
+                  {page.title}
+                </li>
+              </a>
             );
           })}
         </ul>

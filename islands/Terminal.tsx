@@ -23,13 +23,24 @@ export default function Terminal(props: TerminalProps) {
     }, 100);
   }, []);
   return (
-    <div class={tw`bg-gray-900 text-white p-5 rounded text-2xl`}>
-      <span class={tw`text-green-500`}>admin@DESKTOP-6DUI86H&ensp;</span>
-      <span class={tw`text-[magenta]`}>MINGW64&ensp;</span>
-      <span class={tw`text-yellow-200`}>~/Downloads/michael-pfister&ensp;</span>
-      <span class={tw`text-[cyan]`}>(main)</span>
-      <h1>$ {liveCommand}{liveCommandActive && <span>&#9611;</span>}</h1>
-      {!liveCommandActive && <h1>{props.terminalOutput}</h1>}
+    <div>
+      <div class={tw`w-full bg-gray-900 rounded-t p-2 flex gap-3 justify-end`}>
+        <div class={tw`w-[20px] h-[20px] rounded-full bg-[lime]`} />
+        <div class={tw`w-[20px] h-[20px] rounded-full bg-[yellow]`} />
+        <div class={tw`w-[20px] h-[20px] rounded-full bg-[red]`} />
+      </div>
+      <div
+        class={tw`bg-gray-900 bg-opacity-80 text-white p-5 rounded-b text-xl md:text-2xl`}
+      >
+        <span class={tw`text-green-500`}>admin@DESKTOP-6DUI86H&ensp;</span>
+        <span class={tw`text-[magenta]`}>MINGW64&ensp;</span>
+        <span class={tw`text-yellow-200`}>
+          ~/Downloads/michael-pfister&ensp;
+        </span>
+        <span class={tw`text-[cyan]`}>(main)</span>
+        <h1>$ {liveCommand}{liveCommandActive && <span>&#9611;</span>}</h1>
+        {!liveCommandActive && <h1>{props.terminalOutput}</h1>}
+      </div>
     </div>
   );
 }
