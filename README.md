@@ -8,7 +8,7 @@ Full Stack Developer
 My full name is Michael Pascal Pfister. I've been doing random IT stuff since 2016 and I'm probably never going to stop. Currently looking for a job as a Full Stack Web Developer.
 
 * 🌍  I'm based in Vienna
-* 🖥️  See my portfolio at [michael-pfister.deno.dev](http://michael-pfister.deno.dev/)
+* 🖥️  See my portfolio at [michael-pfister.vercel.app](https://michael-pfister.vercel.app/)
 * ✉️  You can contact me at [michael.pfister@inode.at](mailto:michael.pfister@inode.at)
 * 🤝  I'm open to collaborating on any open source project
 
