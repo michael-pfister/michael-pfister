@@ -5,7 +5,7 @@
 Full Stack Developer
 --------------------
 
-My full name is Michael Pascal Pfister. I've been doing random IT stuff since 2016 and I'm probably never going to stop. Currently working as a Junior Full Stack Web Developer.
+My full name is Michael Pascal Pfister. I've been <b>doing random IT stuff since 2016</b> and I'm probably never going to stop. Currently working as a <i>Mid-level Full Stack Web Developer</i>.
 
 * 🌍  I'm based in Vienna
 * 🖥️  See my portfolio at <a href="https://michael-pfister.vercel.app/" target="_blank" rel="noreferrer">michael-pfister.vercel.app</a>
